@@ -1,0 +1,74 @@
+class RechnungsController < ApplicationController
+  before_action :set_rechnung, only: [:show, :edit, :update, :destroy]
+
+  # GET /rechnungs
+  # GET /rechnungs.json
+  def index
+    @rechnungs = Rechnung.all
+  end
+
+  # GET /rechnungs/1
+  # GET /rechnungs/1.json
+  def show
+  end
+
+  # GET /rechnungs/new
+  def new
+    @rechnung = Rechnung.new
+  end
+
+  # GET /rechnungs/1/edit
+  def edit
+  end
+
+  # POST /rechnungs
+  # POST /rechnungs.json
+  def create
+    @rechnung = Rechnung.new(rechnung_params)
+
+    respond_to do |format|
+      if @rechnung.save
+        format.html { redirect_to @rechnung, notice: 'Rechnung was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @rechnung }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @rechnung.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /rechnungs/1
+  # PATCH/PUT /rechnungs/1.json
+  def update
+    respond_to do |format|
+      if @rechnung.update(rechnung_params)
+        format.html { redirect_to @rechnung, notice: 'Rechnung was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @rechnung.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /rechnungs/1
+  # DELETE /rechnungs/1.json
+  def destroy
+    @rechnung.destroy
+    respond_to do |format|
+      format.html { redirect_to rechnungs_url }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_rechnung
+      @rechnung = Rechnung.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def rechnung_params
+      params.require(:rechnung).permit(:kva, :service, :schilder, :sonstiges, :gesamt, :anzahlung, :rest, :bezahlstatus, :antragsstatus, :versand, :anmdeldung_id)
+    end
+end

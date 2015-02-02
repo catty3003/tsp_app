@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  iban: MyString
+  bic: MyString
+  institut: MyString
+  kunde_id: 1
+
+two:
+  iban: MyString
+  bic: MyString
+  institut: MyString
+  kunde_id: 1

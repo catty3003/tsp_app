@@ -1,0 +1,33 @@
+<%= form_for(@kundenkonto) do |f| %>
+  <% if @kundenkonto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kundenkonto.errors.count, "error") %> prohibited this kundenkonto from being saved:</h2>
+
+      <ul>
+      <% @kundenkonto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :iban %><br>
+    <%= f.text_field :iban %>
+  </div>
+  <div class="field">
+    <%= f.label :bic %><br>
+    <%= f.text_field :bic %>
+  </div>
+  <div class="field">
+    <%= f.label :institut %><br>
+    <%= f.text_field :institut %>
+  </div>
+  <div class="field">
+    <%= f.label :kunde_id %><br>
+    <%= f.number_field :kunde_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

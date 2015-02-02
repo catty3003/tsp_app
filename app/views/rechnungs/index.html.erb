@@ -1,0 +1,47 @@
+<h1>Listing rechnungs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kva</th>
+      <th>Service</th>
+      <th>Schilder</th>
+      <th>Sonstiges</th>
+      <th>Gesamt</th>
+      <th>Anzahlung</th>
+      <th>Rest</th>
+      <th>Bezahlstatus</th>
+      <th>Antragsstatus</th>
+      <th>Versand</th>
+      <th>Anmdeldung</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rechnungs.each do |rechnung| %>
+      <tr>
+        <td><%= rechnung.kva %></td>
+        <td><%= rechnung.service %></td>
+        <td><%= rechnung.schilder %></td>
+        <td><%= rechnung.sonstiges %></td>
+        <td><%= rechnung.gesamt %></td>
+        <td><%= rechnung.anzahlung %></td>
+        <td><%= rechnung.rest %></td>
+        <td><%= rechnung.bezahlstatus %></td>
+        <td><%= rechnung.antragsstatus %></td>
+        <td><%= rechnung.versand %></td>
+        <td><%= rechnung.anmdeldung_id %></td>
+        <td><%= link_to 'Show', rechnung %></td>
+        <td><%= link_to 'Edit', edit_rechnung_path(rechnung) %></td>
+        <td><%= link_to 'Destroy', rechnung, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rechnung', new_rechnung_path %>

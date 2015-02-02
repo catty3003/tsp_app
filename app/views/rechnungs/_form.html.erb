@@ -1,0 +1,61 @@
+<%= form_for(@rechnung) do |f| %>
+  <% if @rechnung.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rechnung.errors.count, "error") %> prohibited this rechnung from being saved:</h2>
+
+      <ul>
+      <% @rechnung.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :kva %><br>
+    <%= f.text_field :kva %>
+  </div>
+  <div class="field">
+    <%= f.label :service %><br>
+    <%= f.text_field :service %>
+  </div>
+  <div class="field">
+    <%= f.label :schilder %><br>
+    <%= f.text_field :schilder %>
+  </div>
+  <div class="field">
+    <%= f.label :sonstiges %><br>
+    <%= f.text_field :sonstiges %>
+  </div>
+  <div class="field">
+    <%= f.label :gesamt %><br>
+    <%= f.text_field :gesamt %>
+  </div>
+  <div class="field">
+    <%= f.label :anzahlung %><br>
+    <%= f.text_field :anzahlung %>
+  </div>
+  <div class="field">
+    <%= f.label :rest %><br>
+    <%= f.text_field :rest %>
+  </div>
+  <div class="field">
+    <%= f.label :bezahlstatus %><br>
+    <%= f.check_box :bezahlstatus %>
+  </div>
+  <div class="field">
+    <%= f.label :antragsstatus %><br>
+    <%= f.text_field :antragsstatus %>
+  </div>
+  <div class="field">
+    <%= f.label :versand %><br>
+    <%= f.check_box :versand %>
+  </div>
+  <div class="field">
+    <%= f.label :anmdeldung_id %><br>
+    <%= f.number_field :anmdeldung_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

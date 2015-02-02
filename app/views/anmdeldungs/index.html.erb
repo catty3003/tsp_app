@@ -1,0 +1,49 @@
+<h1>Listing anmdeldungs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identnummer</th>
+      <th>Amtliches kennzeichen</th>
+      <th>Neues kennzeichen</th>
+      <th>Fp</th>
+      <th>Fz brief nr</th>
+      <th>Saison von</th>
+      <th>Saison bis</th>
+      <th>Evb nr</th>
+      <th>Kva notiz</th>
+      <th>Tsp notiz</th>
+      <th>Versand art</th>
+      <th>Kunde</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anmdeldungs.each do |anmdeldung| %>
+      <tr>
+        <td><%= anmdeldung.identnummer %></td>
+        <td><%= anmdeldung.amtliches_kennzeichen %></td>
+        <td><%= anmdeldung.neues_kennzeichen %></td>
+        <td><%= anmdeldung.fp %></td>
+        <td><%= anmdeldung.fz_brief_nr %></td>
+        <td><%= anmdeldung.saison_von %></td>
+        <td><%= anmdeldung.saison_bis %></td>
+        <td><%= anmdeldung.evb_nr %></td>
+        <td><%= anmdeldung.kva_notiz %></td>
+        <td><%= anmdeldung.tsp_notiz %></td>
+        <td><%= anmdeldung.versand_art %></td>
+        <td><%= anmdeldung.kunde_id %></td>
+        <td><%= link_to 'Show', anmdeldung %></td>
+        <td><%= link_to 'Edit', edit_anmdeldung_path(anmdeldung) %></td>
+        <td><%= link_to 'Destroy', anmdeldung, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anmdeldung', new_anmdeldung_path %>

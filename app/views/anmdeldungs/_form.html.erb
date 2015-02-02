@@ -1,0 +1,65 @@
+<%= form_for(@anmdeldung) do |f| %>
+  <% if @anmdeldung.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anmdeldung.errors.count, "error") %> prohibited this anmdeldung from being saved:</h2>
+
+      <ul>
+      <% @anmdeldung.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :identnummer %><br>
+    <%= f.text_field :identnummer %>
+  </div>
+  <div class="field">
+    <%= f.label :amtliches_kennzeichen %><br>
+    <%= f.text_field :amtliches_kennzeichen %>
+  </div>
+  <div class="field">
+    <%= f.label :neues_kennzeichen %><br>
+    <%= f.text_field :neues_kennzeichen %>
+  </div>
+  <div class="field">
+    <%= f.label :fp %><br>
+    <%= f.check_box :fp %>
+  </div>
+  <div class="field">
+    <%= f.label :fz_brief_nr %><br>
+    <%= f.text_field :fz_brief_nr %>
+  </div>
+  <div class="field">
+    <%= f.label :saison_von %><br>
+    <%= f.text_field :saison_von %>
+  </div>
+  <div class="field">
+    <%= f.label :saison_bis %><br>
+    <%= f.text_field :saison_bis %>
+  </div>
+  <div class="field">
+    <%= f.label :evb_nr %><br>
+    <%= f.text_field :evb_nr %>
+  </div>
+  <div class="field">
+    <%= f.label :kva_notiz %><br>
+    <%= f.text_field :kva_notiz %>
+  </div>
+  <div class="field">
+    <%= f.label :tsp_notiz %><br>
+    <%= f.text_field :tsp_notiz %>
+  </div>
+  <div class="field">
+    <%= f.label :versand_art %><br>
+    <%= f.check_box :versand_art %>
+  </div>
+  <div class="field">
+    <%= f.label :kunde_id %><br>
+    <%= f.number_field :kunde_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

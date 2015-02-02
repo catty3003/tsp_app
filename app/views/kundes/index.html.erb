@@ -1,0 +1,47 @@
+<h1>Listing kundes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gruppe</th>
+      <th>Anrede</th>
+      <th>Nachname</th>
+      <th>Vorname</th>
+      <th>Geburtsdatum</th>
+      <th>Geburtsort</th>
+      <th>Adresse</th>
+      <th>Plz</th>
+      <th>Stadt</th>
+      <th>Telefonnummer</th>
+      <th>Tsp versicherungskunde</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kundes.each do |kunde| %>
+      <tr>
+        <td><%= kunde.gruppe %></td>
+        <td><%= kunde.anrede %></td>
+        <td><%= kunde.nachname %></td>
+        <td><%= kunde.vorname %></td>
+        <td><%= kunde.geburtsdatum %></td>
+        <td><%= kunde.geburtsort %></td>
+        <td><%= kunde.adresse %></td>
+        <td><%= kunde.plz %></td>
+        <td><%= kunde.stadt %></td>
+        <td><%= kunde.telefonnummer %></td>
+        <td><%= kunde.tsp_versicherungskunde %></td>
+        <td><%= link_to 'Show', kunde %></td>
+        <td><%= link_to 'Edit', edit_kunde_path(kunde) %></td>
+        <td><%= link_to 'Destroy', kunde, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kunde', new_kunde_path %>

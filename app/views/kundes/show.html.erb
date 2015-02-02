@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gruppe:</strong>
+  <%= @kunde.gruppe %>
+</p>
+
+<p>
+  <strong>Anrede:</strong>
+  <%= @kunde.anrede %>
+</p>
+
+<p>
+  <strong>Nachname:</strong>
+  <%= @kunde.nachname %>
+</p>
+
+<p>
+  <strong>Vorname:</strong>
+  <%= @kunde.vorname %>
+</p>
+
+<p>
+  <strong>Geburtsdatum:</strong>
+  <%= @kunde.geburtsdatum %>
+</p>
+
+<p>
+  <strong>Geburtsort:</strong>
+  <%= @kunde.geburtsort %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @kunde.adresse %>
+</p>
+
+<p>
+  <strong>Plz:</strong>
+  <%= @kunde.plz %>
+</p>
+
+<p>
+  <strong>Stadt:</strong>
+  <%= @kunde.stadt %>
+</p>
+
+<p>
+  <strong>Telefonnummer:</strong>
+  <%= @kunde.telefonnummer %>
+</p>
+
+<p>
+  <strong>Tsp versicherungskunde:</strong>
+  <%= @kunde.tsp_versicherungskunde %>
+</p>
+
+<%= link_to 'Edit', edit_kunde_path(@kunde) %> |
+<%= link_to 'Back', kundes_path %>

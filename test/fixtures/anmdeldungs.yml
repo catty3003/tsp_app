@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  identnummer: MyString
+  amtliches_kennzeichen: MyString
+  neues_kennzeichen: MyString
+  fp: false
+  fz_brief_nr: MyString
+  saison_von: MyString
+  saison_bis: MyString
+  evb_nr: MyString
+  kva_notiz: MyString
+  tsp_notiz: MyString
+  versand_art: false
+  kunde_id: 1
+
+two:
+  identnummer: MyString
+  amtliches_kennzeichen: MyString
+  neues_kennzeichen: MyString
+  fp: false
+  fz_brief_nr: MyString
+  saison_von: MyString
+  saison_bis: MyString
+  evb_nr: MyString
+  kva_notiz: MyString
+  tsp_notiz: MyString
+  versand_art: false
+  kunde_id: 1

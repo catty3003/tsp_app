@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kva: 9.99
+  service: 9.99
+  schilder: 9.99
+  sonstiges: 9.99
+  gesamt: 9.99
+  anzahlung: 9.99
+  rest: 9.99
+  bezahlstatus: false
+  antragsstatus: MyString
+  versand: false
+  anmdeldung_id: 1
+
+two:
+  kva: 9.99
+  service: 9.99
+  schilder: 9.99
+  sonstiges: 9.99
+  gesamt: 9.99
+  anzahlung: 9.99
+  rest: 9.99
+  bezahlstatus: false
+  antragsstatus: MyString
+  versand: false
+  anmdeldung_id: 1

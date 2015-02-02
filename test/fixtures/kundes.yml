@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gruppe: MyString
+  anrede: MyString
+  nachname: MyString
+  vorname: MyString
+  geburtsdatum: 2015-02-02
+  geburtsort: MyString
+  adresse: MyString
+  plz: MyString
+  stadt: MyString
+  telefonnummer: MyString
+  tsp_versicherungskunde: false
+
+two:
+  gruppe: MyString
+  anrede: MyString
+  nachname: MyString
+  vorname: MyString
+  geburtsdatum: 2015-02-02
+  geburtsort: MyString
+  adresse: MyString
+  plz: MyString
+  stadt: MyString
+  telefonnummer: MyString
+  tsp_versicherungskunde: false

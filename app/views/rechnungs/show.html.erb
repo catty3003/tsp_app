@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kva:</strong>
+  <%= @rechnung.kva %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @rechnung.service %>
+</p>
+
+<p>
+  <strong>Schilder:</strong>
+  <%= @rechnung.schilder %>
+</p>
+
+<p>
+  <strong>Sonstiges:</strong>
+  <%= @rechnung.sonstiges %>
+</p>
+
+<p>
+  <strong>Gesamt:</strong>
+  <%= @rechnung.gesamt %>
+</p>
+
+<p>
+  <strong>Anzahlung:</strong>
+  <%= @rechnung.anzahlung %>
+</p>
+
+<p>
+  <strong>Rest:</strong>
+  <%= @rechnung.rest %>
+</p>
+
+<p>
+  <strong>Bezahlstatus:</strong>
+  <%= @rechnung.bezahlstatus %>
+</p>
+
+<p>
+  <strong>Antragsstatus:</strong>
+  <%= @rechnung.antragsstatus %>
+</p>
+
+<p>
+  <strong>Versand:</strong>
+  <%= @rechnung.versand %>
+</p>
+
+<p>
+  <strong>Anmdeldung:</strong>
+  <%= @rechnung.anmdeldung_id %>
+</p>
+
+<%= link_to 'Edit', edit_rechnung_path(@rechnung) %> |
+<%= link_to 'Back', rechnungs_path %>

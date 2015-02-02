@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identnummer:</strong>
+  <%= @anmdeldung.identnummer %>
+</p>
+
+<p>
+  <strong>Amtliches kennzeichen:</strong>
+  <%= @anmdeldung.amtliches_kennzeichen %>
+</p>
+
+<p>
+  <strong>Neues kennzeichen:</strong>
+  <%= @anmdeldung.neues_kennzeichen %>
+</p>
+
+<p>
+  <strong>Fp:</strong>
+  <%= @anmdeldung.fp %>
+</p>
+
+<p>
+  <strong>Fz brief nr:</strong>
+  <%= @anmdeldung.fz_brief_nr %>
+</p>
+
+<p>
+  <strong>Saison von:</strong>
+  <%= @anmdeldung.saison_von %>
+</p>
+
+<p>
+  <strong>Saison bis:</strong>
+  <%= @anmdeldung.saison_bis %>
+</p>
+
+<p>
+  <strong>Evb nr:</strong>
+  <%= @anmdeldung.evb_nr %>
+</p>
+
+<p>
+  <strong>Kva notiz:</strong>
+  <%= @anmdeldung.kva_notiz %>
+</p>
+
+<p>
+  <strong>Tsp notiz:</strong>
+  <%= @anmdeldung.tsp_notiz %>
+</p>
+
+<p>
+  <strong>Versand art:</strong>
+  <%= @anmdeldung.versand_art %>
+</p>
+
+<p>
+  <strong>Kunde:</strong>
+  <%= @anmdeldung.kunde_id %>
+</p>
+
+<%= link_to 'Edit', edit_anmdeldung_path(@anmdeldung) %> |
+<%= link_to 'Back', anmdeldungs_path %>

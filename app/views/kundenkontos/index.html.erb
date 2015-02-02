@@ -1,0 +1,33 @@
+<h1>Listing kundenkontos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Iban</th>
+      <th>Bic</th>
+      <th>Institut</th>
+      <th>Kunde</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kundenkontos.each do |kundenkonto| %>
+      <tr>
+        <td><%= kundenkonto.iban %></td>
+        <td><%= kundenkonto.bic %></td>
+        <td><%= kundenkonto.institut %></td>
+        <td><%= kundenkonto.kunde_id %></td>
+        <td><%= link_to 'Show', kundenkonto %></td>
+        <td><%= link_to 'Edit', edit_kundenkonto_path(kundenkonto) %></td>
+        <td><%= link_to 'Destroy', kundenkonto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kundenkonto', new_kundenkonto_path %>
